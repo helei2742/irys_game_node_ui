@@ -1,0 +1,70 @@
+// theme.scss
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #7e57c2,     // 主紫色
+      'light-3': #9575cd,  // 稍亮紫
+      'light-5': #b39ddb,  // 更浅紫
+      'light-7': #d1c4e9,  // 浅紫接近灰
+      'dark-2': #5e35b1    // 深紫
+    ),
+    'success': (
+      'base': #4caf50,     // 绿色（保持中性）
+      'light-3': #81c784,
+      'light-5': #a5d6a7,
+      'light-7': #c8e6c9,
+      'dark-2': #388e3c
+    ),
+    'warning': (
+      'base': #ffb300,     // 金黄色
+      'light-3': #ffca28,
+      'light-5': #ffd54f,
+      'light-7': #ffe082,
+      'dark-2': #ffa000
+    ),
+    'danger': (
+      'base': #e53935,     // 红色
+      'light-3': #ef5350,
+      'light-5': #e57373,
+      'light-7': #ef9a9a,
+      'dark-2': #c62828
+    ),
+    'info': (
+      'base': #b39ddb, // 柔和浅紫
+      'light-3': #c5b2e0,
+      'light-5': #d7c7e6,
+      'light-7': #ede7f6,
+      'dark-2': #9575cd
+    ),
+    // 背景色（深色主题）
+    'background-color': (
+      //'base': #1e1b2e, // 深黑紫
+      //'overlay': #2a253b
+    ),
+    // 边框色
+    'border-color': (
+      'base': #7e57c2,
+      'light': #9575cd,
+      'dark': #5e35b1
+    ),
+  ),
+);
+
+// 引入 Element Plus 样式
+@use 'element-plus/theme-chalk/src/index.scss' as *;
+
+// 覆盖按钮样式（黑紫主题）
+.button-primary {
+  background-color: #5e35b1 !important; // 深紫
+  border-color: #5e35b1 !important;
+
+  &:hover {
+    background-color: #4527a0 !important; // 更深
+    border-color: #4527a0 !important;
+  }
+
+  &:active {
+    background-color: #311b92 !important; // 最深
+    border-color: #311b92 !important;
+  }
+}
